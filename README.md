@@ -1,2 +1,2 @@
 # codechef
-codechef june long challenge
+QUESTION 1- CHAIRS REQUIREMENTS
