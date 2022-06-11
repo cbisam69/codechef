@@ -1,0 +1,59 @@
+/*Given a string A of length N consisting of lowercase English alphabet letters.
+
+You are allowed to perform the following operation on the string A any number of times:
+
+Select a non-empty subsequence S of the array [1,2,3,…,N] and any lowercase English alphabet α;
+Change Ai to α for all i∈S.
+Find the minimum number of operations required to convert A into a given string B of length N consisting of lowercase English alphabet letters.
+
+Input Format
+The first line of input contains a single integer T, denoting the number of test cases. The description of T test cases follow.
+The first line of each test case contains an integer N - the length of the string A and B.
+The second line of each test case contains the string A.
+The third line of each test case contains the string B.
+Output Format
+For each test case, output the minimum number of operations required to convert string A into string B.
+
+Constraints
+1≤T≤104
+1≤N≤105
+Sum of N over all test cases does not exceed 105.
+Sample Input 1 
+3
+2
+ab
+cd
+3
+aaa
+bab
+4
+abcd
+aaab
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{    int test,n,a=1; 
+    cin>>test;
+    while(a<=test)
+    {    string A,B;
+         n=A.size();
+        cin>>n;
+       
+      set<char>v;
+       cin>>A>>B;
+       
+     for(int i=0;i<n;i++)
+      {
+        if(A[i]!=B[i])
+        {
+          v.insert(B[i]);  
+        }
+         
+     }
+     cout<<v.size()<<endl;
+     a++;
+    } 
+    return 0;
+}
